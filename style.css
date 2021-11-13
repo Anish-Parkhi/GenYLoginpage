@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@300;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+section {
+  min-height: 95vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.199);
+  padding: 50px 30px;
+  border-radius: 10px;
+  min-width: 800px;
+  max-width: 1000px;
+  min-height: 500px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f5f7;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .form {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding: 0 20px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f5f7;
+  transition: 0.7s ease-in-out transform;
+  overflow: hidden;
+}
+.container .form.sign-in-form {
+  background-image:url(./img2.svg);
+  left:0;
+  background-position-x: left;
+}
+.container .form.sign-up-form {
+  background-image:url(./img2.svg);
+  background-position-x: right ;
+  right:0;
+}
+.container .form .wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s ease-in-out transform;
+}
+.container .form.sign-in-form .wrapper {
+  transform: translateX(100%);
+}
+.container .sign-in-form.active .wrapper {
+  transform: translateX(0);
+}
+.container .form.sign-up-form .wrapper {
+  transform: translateX(-100%);
+}
+.container .sign-up-form.active .wrapper {
+  transform: translateX(0);
+}
+.container .form h1 {
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.container .form p {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: capitalize;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+.container .form input {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  height: 35px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  padding-left: 15px;
+  border-radius: 20px;
+  background-color: rgba(199, 197, 197, 0.425);
+  outline: none;
+}
+.container .form input::placeholder {
+  color: rgba(0, 0, 0, 0.658);
+}
+.overlay-container .overlay button,
+.container .form button {
+  padding: 10px 50px;
+  border: none;
+  outline: none;
+  font-family: "Montserrat";
+  font-size: 18px;
+  background-color: yellow;
+  cursor: pointer;
+  color: black;
+  border-radius: 30px;
+}
+.container .overlay-container {
+  position: absolute;
+  background-color: yellow;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.7s ease-in-out transform;
+}
+
+.container .overlay-container .overlay{
+  background-image: url(./img1.jpg);
+  background-size: 100%;
+  background-position-x: left;
+  position: absolute;
+  left: 0%;
+  width: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: 0.7s ease-in-out transform;
+  z-index: 1;
+}
+.container .overlay::after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index:-1;
+  opacity: 0;
+}
+.overlay-container .overlay .overlay-left
+{
+  flex-basis: 50%;
+  text-align: center;
+}
+.overlay-container .overlay .overlay-right {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.overlay-container .overlay h1 {
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-weight: 300;
+  color: black;
+}
+.overlay-container .overlay p {
+  color: black;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 300;
+}
+.overlay-container .overlay button {
+background-color: yellow;
+  color: black;
+  margin-top: 20px;
+}
+.container .form .wrapper h2{
+  color: red;
+  font: bold,oblique,italic;
+  font-size: 250%;
+}
+
